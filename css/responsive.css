@@ -1,0 +1,59 @@
+/*Media Querries for Modal*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .modalContent {
+    width: 70%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .modalContent {
+    width: 80%;
+  }
+}
+
+@media (max-width: 575px) {
+  .modalContent {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .modalContent {
+    min-width: 22.5rem;
+    padding: 0;
+    width: 0%;
+  }
+
+  .modalContent form .input::placeholder {
+    font-size: 1rem;
+  }
+  .modalContent .loginbox {
+    padding: 0 0.5rem !important;
+  }
+
+  .avatar {
+    width: 3.75rem;
+    height:3.75rem;
+    top: -1.875rem;
+    left: calc(59% - 3.125rem);
+  }
+
+  .loginBox {
+    width: 22.375rem;
+    height:23.125rem;
+  }
+
+  .loginBox h1 {
+    font-size: 1.1rem;
+  }
+  .loginBox p {
+    font-size: 0.58rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .loginBox {
+    width:21.25rem;
+    height: 22.5rem;
+  }
+}

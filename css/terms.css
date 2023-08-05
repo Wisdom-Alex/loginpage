@@ -1,0 +1,46 @@
+*,
+*::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #ccc;
+  padding: 20px 50px 0 55px;
+}
+
+header {
+  background-color: ivory;
+  color: salmon;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+/*Footer*/
+footer {
+  background: linear-gradient(to right, #122b48, #11141d);
+  color: #fff;
+  font-size: 2.2rem;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 900;
+  height: 5rem;
+}
+
+footer a {
+  color: azure;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.terms {
+  margin-bottom: 100px;
+}

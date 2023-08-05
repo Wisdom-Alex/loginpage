@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="./jquery/jquery-3.6.0.min.js"></script>
+  <script src="./jquery/jquery-3.6.0.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+  <link rel="stylesheet" href="./Font-awesome/fontawesome-free-6.1.1-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./Font-awesome/fontawesome-free-6.1.1-web/css/all.min.css">
+  <link rel="stylesheet" href="css/font-awesome-4.7.0.min.css">
+  <title>[Wizzy-Alex] - log in or register</title>
+
+  <!-- Web Loader -->
+
+  <div class="loader">
+    <embed src="audio/Rema-Why-(JustNaija.com).mp3" type="audio/mpeg" volume="26" autostart="true" loop="true" width="2"
+      height="0" />
+    <img src="Img/New2.gif" alt="preloader" />
+  </div>
+</head>
+
+<body>
+  <div class="snow"></div>
+  <div class="hero">
+    <div class="container">
+      <!--Form Box-->
+      <div class="form-box">
+        <header>
+          <center>
+            <marquee>
+              <h1>
+                <big><i><span class="highlight">[Wizzy</span>_Alex]</i></big>
+              </h1>
+            </marquee>
+          </center>
+        </header>
+
+        <!--Toggle Button-->
+        <div class="button-toggle">
+          <div id="btn"></div>
+          <button class="toggles-btn" type="button" onclick="login()">
+            Log In
+          </button>
+          <button class="toggles-btn" type="button" onclick="register()">
+            Register
+          </button>
+        </div>
+
+        <!--SocialMedia Icons-->
+        <div class="socialmedia-icons">
+          <a href="#"><img src="./Img/google.png" alt="google" /></a>
+          <a href="#"><img src="./Img/instagram.png" alt="ig" /></a>
+          <a href="#"><img src="./Img/linkedin-logo.png" alt="linked-in" /></a>
+        </div>
+
+        <!---Login----->
+        <form class="input-group" id="login" method="POST">
+          <!---Username---->
+          <div class="input-field">
+            <i class="fa fa-user" style="color: ivory"></i>
+            <input type="text" name="email" placeholder="Username or Email ..." required />
+          </div>
+
+          <!--Password--->
+          <div class="input-field">
+            <i class="fa fa-lock" style="color: ivory"></i>
+            <input type="password" name="password" placeholder="Enter Password" id="myInput" required />
+            <span class="eye" onclick="myFunction()" style="cursor: pointer">
+              <i id="hide1" class="fa fa-eye"></i>
+              <i id="hide2" class="fa fa-eye-slash"></i>
+            </span>
+          </div>
+          <input type="checkbox" checked class="check-box" /><span class="rem" style="color: aqua">Remember
+            Password</span>
+          <button type="submit" class="submit-btn" style="color: ivory; font-size: 22px" value="Log In">
+            Log In
+          </button>
+          <p class="forgot">
+            Forgot Password ?
+            <a href="#" class="btn_forgot" id="modalBtn">Click Here</a>
+          </p>
+        </form>
+
+        <!---Register----->
+        <form class="input-group" id="register" method="POST">
+          <!---Username---->
+          <div class="input-field">
+            <i class="fa fa-user" style="color: ivory"></i>
+            <input autocomplete="off" type="text" title="Username must a least be 6 characters long" pattern="(?=.{6,}"
+              minlength="6" placeholder="Username" required id="username" name="name" />
+          </div>
+
+          <!---Email---->
+          <div class="input-field">
+            <i class="fa fa-envelope-o" style="color: ivory"></i>
+            <input autocomplete="off" type="email" placeholder="Enter Email ..." required name="email" />
+          </div>
+
+          <!--Password--->
+          <div class="content">
+            <div class="lock">
+              <div class="fa fa-lock" style="color: ivory"></div>
+            </div>
+            <input type="password" id="InputPassword" name="psw" placeholder="Enter Password" class="visibility"
+              required />
+
+            <span class="show-hide">
+              <i class="fa fa-eye tone"></i>
+            </span>
+          </div>
+
+          <p class="TextError"></p>
+
+          <input type="checkbox" class="check-box" required /><span class="rem" style="color: aqua">I agree to the
+            <a class="all" href="HTML/Terms.html" target="_blank">terms & conditons</a></span>
+
+          <button type="submit" class="submit-btn" style="color: ivory; font-size: 22px" value="register">
+            Register
+          </button>
+        </form>
+      </div>
+
+      <!--Modal Forgot Password----->
+      <div id="myModal" class="modal">
+        <div class="modalContent">
+          <div class="modalBody">
+            <div class="loginBox">
+              <img src="img/avatar.png" alt="avatar" class="avatar" />
+              <div class="modalHeader">
+                <span id="close" class="close">&#9874;</span>
+              </div>
+              <h1>Password Recovery</h1>
+              <p>
+                Enter either the<strong style="color: dodgerblue">
+                  email address</strong>
+                or <strong style="color: dodgerblue">username</strong> of the
+                account and
+                <strong style="color: dodgerblue">click submit</strong>
+              </p>
+              <p>We'll email instructions on how to reset your password.</p>
+              <form action="" class="recovery-form" method="post">
+                <input autocomplete="off" type="text" class="input" required
+                  placeholder="Enter Email or Username Here..." />
+
+                <button type="submit" class="button" value="Submit" onclick="modalMssg()">
+                  <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                  SUBMIT
+                </button>
+              </form>
+              <p class="mssg">
+                An email has been sent to you with futher intructions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          <a target="_blank" href="https://wizzy_alex.org">[Wizzy_Alex]&#9775;</a>&nbsp; Web
+          Design, copyright &copy; 2021
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <!--JS Only--->
+  <script src="js/login.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

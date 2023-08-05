@@ -1,0 +1,569 @@
+/*Fonts-family*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Peddana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+
+/* Import fonts */
+@font-face {
+  font-family: "Comfortaa", cursive;
+  src: url(../fonts/Comfortaa-Regular.ttf);
+}
+
+@font-face {
+  font-family: dancing script;
+  src: url(../fonts/DancingScript-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+
+/*Global*/
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../Img/photo.jpg") center center no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+  margin: -1.25rem 0 3.125rem;
+  overflow-x: hidden;
+}
+
+/*Form Box*/
+.form-box {
+  width: 23.75rem;
+  height: 32.1875rem;
+  position: relative;
+  margin: 8% auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+  overflow: hidden;
+}
+
+.form-box::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  width: 50%;
+  height: 100%;
+}
+
+/*Header*/
+
+header {
+  color: #ffffff;
+}
+
+header h1,
+h1 .neon {
+  margin: 0;
+  padding-top: 0.9375rem;
+  font-family: "ALGER";
+  font-size: 1.75rem;
+  transform: translate(-20%, -20%);
+  text-shadow: 0 0 11px #ff005b;
+}
+
+header .highlight {
+  color: salmon;
+  font-weight: bold;
+}
+
+/*Button Toggle*/
+.button-toggle {
+  width: 13.75rem;
+  margin: 0.8125rem auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #f6125f;
+  border-radius: 1.875rem;
+}
+
+.toggles-btn {
+  padding: 0.625rem 1.875rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: ivory;
+  letter-spacing: 0.5px;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 6.875rem;
+  height: 100%;
+  background: linear-gradient(to right, dodgerblue, #354246, salmon);
+  border-radius: 1.875rem;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}
+
+/*Social Media Icons*/
+.socialmedia-icons {
+  margin: 1.3125rem auto;
+  text-align: center;
+}
+
+.socialmedia-icons img {
+  position: relative;
+  margin: 0 0.75rem;
+  box-shadow: 0 0 1.25rem 0 #2f7f7f;
+  cursor: pointer !important;
+  border-radius: 50%;
+}
+
+/*Input*/
+
+.input-group {
+  top: 11.875rem;
+  position: absolute;
+  width: 17.5rem;
+  transition: 0.5s;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.625rem 0;
+  margin: 0.3125rem 0;
+  border-bottom: 1px solid salmon;
+}
+
+.input-field input {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #37d7fb;
+  font-size: 1.0625rem;
+}
+
+.content {
+  width: 17.5rem;
+  padding: 0.5625rem 0;
+  margin: 0.3125rem 0;
+  border-bottom: 1px solid salmon;
+  height: 2.5rem;
+  display: flex;
+}
+.content.lock {
+  position: absolute;
+  height: 3.125rem;
+  width: 3.125rem;
+  line-height: 3.625rem;
+  font-size: 1.25rem;
+}
+.content input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.0625rem;
+  color: #37d7fb;
+  padding-left: 0;
+}
+
+.show-hide i {
+  font-size: 1.1875rem;
+  color: #48dbfb;
+  cursor: pointer;
+  display: none;
+}
+
+.show-hide i.hide:before {
+  content: "\f070";
+}
+
+.content input:valid ~ .show-hide i {
+  display: block;
+}
+
+::placeholder {
+  color: aquamarine;
+  opacity: 1;
+  letter-spacing: 0.6px;
+}
+
+input[type="email"]::placeholder {
+  padding-left: 3px;
+}
+
+#register input[type="password"]::placeholder {
+  margin-left: 0;
+}
+
+/* Register Password Message */
+.TextError {
+  margin-bottom: -1.25rem;
+  font-family: cursive;
+  font-size: 0.7875rem;
+  font-weight: bold;
+}
+
+/*Submit Button*/
+
+.submit-btn {
+  width: 85%;
+  padding: 0.9375rem 1.875rem;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, dodgerblue, #354246, salmon);
+  opacity: 0.8;
+  border: 0;
+  outline: none;
+  border-radius: 2.5rem;
+}
+
+.submit-btn:hover {
+  opacity: 5;
+}
+
+.check-box {
+  margin: 1.875rem 0.625rem 1.875rem 0.3125rem;
+}
+
+span .rem {
+  font-size: 2.625rem;
+  bottom: 2.5rem;
+  position: relative;
+}
+
+.all {
+  font-size: 1.03125rem;
+  color: greenyellow;
+}
+
+#login {
+  left: 3.125rem;
+}
+
+.forgot {
+  color: ivory;
+  margin-top: 1.875rem;
+  position: relative;
+}
+
+.btn_forgot {
+  color: salmon;
+}
+
+#register {
+  left: 28.125rem;
+}
+
+.fa {
+  width: 1.625rem;
+  text-align: center;
+  float: left;
+}
+
+/*Login Password Visibility*/
+.eye {
+  position: absolute;
+  margin-left: -1.1875rem;
+  font-size: 1.1875rem;
+  color: #48dbfb;
+}
+
+#hide1 {
+  display: none;
+}
+
+.eye i {
+  display: none;
+}
+
+.input-field input:valid ~ .eye i {
+  display: block;
+}
+
+/*Footer*/
+footer {
+  background: linear-gradient(to right, #122b48, #11141d);
+  color: #fff;
+  font-size: 0.875rem;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 900;
+  user-select: none;
+}
+
+footer a {
+  color: azure;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 0.625rem 0;
+}
+
+/*Web Loader*/
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(100deg, #110e1f, #1b1730);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader > img {
+  width: 18.75rem;
+}
+
+/*Snow Effect*/
+.snow {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../Img/snowfall-20200922T231654Z-001/snowfall/snowfall1.png),
+    url(../Img/snowfall-20200922T231654Z-001/snowfall/snowfall2.png),
+    url(../Img/snowfall-20200922T231654Z-001/snowfall/snowfall3.png);
+  animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 31.25rem 62.5rem, 25rem 25rem, 18.6875rem 18.6875rem;
+  }
+}
+
+/*Modal for Forgot Password*/
+
+/*Modal*/
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 3.125rem 0;
+  z-index: 1000;
+  overflow: hidden !important;
+}
+
+/*Modal content*/
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: azure;
+  padding: 1.25rem;
+  min-width: 31.25rem;
+  height: 75%;
+  width: 50%;
+  -webkit-animation: formDown 0.5s;
+  animation: formDown 0.5s;
+}
+
+/*Close (a.k.a) Modal header*/
+
+.close {
+  float: right;
+  font-size: 2.3125rem;
+  cursor: pointer;
+  color: red;
+  margin: -20% 0 0 0;
+  transition: all 0.5s ease;
+}
+
+/*forgot password Login Box*/
+
+.loginBox {
+  position: relative;
+  width: 28.125rem;
+  height: 30rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: azure;
+  padding: 0 1.875rem;
+  margin: 0 auto;
+  border-radius: 5%;
+  box-sizing: border-box;
+  margin-bottom: 4%;
+  margin-top: 3%;
+}
+
+/*Avatar*/
+.avatar {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  position: relative;
+  top: -3.125rem;
+  left: calc(50% - 3.125rem);
+}
+
+/*forgot password Login Box h1*/
+.loginBox h1 {
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+  padding: 0 0 1.25rem;
+  text-align: center;
+  font-size: 1.5625rem;
+}
+
+/*forgot password Login Box P*/
+.loginBox p {
+  font-family: dancing script, cursive;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin: 0.8em 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/*forgot password Login Box P .mssg*/
+.loginBox p.mssg {
+  opacity: 0;
+  -webkit-transition: opacity 1s 0.5s ease;
+  -moz-transition: opacity 1s 0.5s ease;
+  -o-transition: opacity 1s 0.5s ease;
+  transition: opacity 1s 0.5s ease;
+  font-size: 0.75rem;
+}
+
+.loginBox p.mssg {
+  opacity: 0;
+}
+
+/*forgot password Login Box Button*/
+.loginBox button {
+  cursor: pointer;
+  background: #007f8e;
+  padding: 0.4375rem 1.25rem;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  border-color: white;
+  width: auto;
+  display: block;
+  transition: all 0.5s ease;
+  margin-bottom: 1.625rem;
+}
+
+.loginBox button:hover {
+  background: #308fe8;
+}
+
+/*forgot password Login Box Button (Click here)*/
+.btn_forgot:hover {
+  color: darkgray;
+}
+
+.btn_forgot {
+  transition: all 0.5s ease;
+}
+
+.btn_forgot {
+  transition: all 0.5s ease;
+}
+
+/*forgot password Login Box Button (form input[text])*/
+.modalContent .recovery-form .input {
+  margin: 0 0 0.8em 0;
+  padding: 0.8em 2em 0.625rem 0;
+  width: 100%;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #5a6374;
+  outline: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  color: #6f6;
+  font-size: 1rem;
+}
+
+.modalContent form .input[type="text"]:focus {
+  border-bottom: 1px solid #007c8e;
+}
+
+.modalContent form .input::placeholder {
+  font-size: 1.1875rem;
+}
+
+/*Animation for modal content*/
+
+@-webkit-keyframes formDown {
+  from {
+    top: -6.3rem;
+    opacity: 0;
+  }
+  to {
+    top: calc(50%);
+    opacity: 1;
+  }
+}
+@-o-keyframes formDown {
+  from {
+    top: -6.3rem;
+    opacity: 0;
+  }
+  to {
+    top: calc(50%);
+    opacity: 1;
+  }
+}
+@-moz-keyframes formDown {
+  from {
+    top: -6.3rem;
+    opacity: 0;
+  }
+  to {
+    top: calc(50%);
+    opacity: 1;
+  }
+}
+@keyframes formDown {
+  from {
+    top: -6.3rem;
+    opacity: 0;
+  }
+  to {
+    top: calc(50%);
+    opacity: 1;
+  }
+}
